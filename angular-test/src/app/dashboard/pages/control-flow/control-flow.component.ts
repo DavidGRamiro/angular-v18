@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-control-flow',
@@ -9,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './control-flow.component.scss'
 })
 export default class ControlFlowComponent implements OnInit {
+
+
+  public showContent = signal(false);
+
 
   constructor() { }
 

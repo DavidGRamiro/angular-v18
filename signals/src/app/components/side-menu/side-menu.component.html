@@ -1,0 +1,9 @@
+<ul class="list-group">
+  @for( item of menuItems(); track $index ){
+    <li class="list-group-item">
+      <a [routerLink]="item.router" routerLinkActive="active" class="nav-link">
+        <span class="nav-link-text">{{ item.title }}</span>
+      </a>
+    </li>
+  }
+</ul>
