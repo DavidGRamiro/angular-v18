@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './view-transition.component.html',
   styleUrl: './view-transition.component.scss'
 })
-export class ViewTransitionComponent implements OnInit {
+export default class ViewTransitionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {

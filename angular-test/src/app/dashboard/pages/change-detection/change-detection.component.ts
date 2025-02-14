@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './change-detection.component.html',
   styleUrl: './change-detection.component.scss'
 })
-export class ChangeDetectionComponent implements OnInit {
+export default class ChangeDetectionComponent implements OnInit {
 
   constructor() { }
 

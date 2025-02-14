@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './defer-options.component.html',
   styleUrl: './defer-options.component.scss'
 })
-export class DeferOptionsComponent implements OnInit {
+export default class  DeferOptionsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {

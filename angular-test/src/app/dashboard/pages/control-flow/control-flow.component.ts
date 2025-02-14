@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './control-flow.component.html',
   styleUrl: './control-flow.component.scss'
 })
-export class ControlFlowComponent implements OnInit {
+export default class ControlFlowComponent implements OnInit {
 
   constructor() { }
 

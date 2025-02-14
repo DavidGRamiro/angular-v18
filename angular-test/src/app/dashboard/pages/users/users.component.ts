@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })
-export class UsersComponent implements OnInit {
+export default class UsersComponent implements OnInit {
 
   constructor() { }
 
