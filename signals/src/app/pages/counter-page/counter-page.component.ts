@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, signal, type OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-counter-page',
@@ -10,6 +10,14 @@ import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
 })
 export class CounterPageComponent implements OnInit {
 
+  public counter = signal(10)
+  public squareCounter = computed(() => this.counter() * this.counter())
+
+
   ngOnInit(): void { }
+
+  incrementar(value:number){
+    this.counter.update( current => current + value)
+  }
 
 }
