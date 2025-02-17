@@ -23,6 +23,8 @@ export class PropertiesPageComponent implements OnInit {
     avatar: "https://reqres.in/img/faces/1-image.jpg"
   })
 
+  // Es una señal que se ejecuta cada vez que se actualiza el valor de la señal user o del contador
+  // Se autodestruye
   public userChangeEffect = effect(() => {
     console.log(`Usuaio: ${this.user().first_name} Contador: ${this.counter()}`)
 
@@ -32,15 +34,9 @@ export class PropertiesPageComponent implements OnInit {
     this.counter.update(current => current + value)
   }
 
-
   ngOnInit(): void { }
 
   onFieldUpdated(field : keyof User, value:string){
-
-    // this.user.set({
-    //   ...this.user(),
-    //   [field]: value
-    // })
 
     this.user.update( current => ({
       ...current,
