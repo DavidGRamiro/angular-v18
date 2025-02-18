@@ -1,14 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-heavy-loaders-fast',
   standalone: true,
-  imports: [],
-  templateUrl: `<h1>Hola fast</h1>`
+  imports: [CommonModule],
+  template: `
+  <section [ngClass]="['w-full ', cssClass]">
+    <ng-content></ng-content>
+  
+  </section>`
 })
 export class HeavyLoadersFastComponent implements OnInit {
 
-  constructor() { }
+  @Input({ required: true }) cssClass!: string;
+
+  constructor() {
+
+    console.log('Heavy loader fast creado')
+  }
 
   ngOnInit(): void {
   }

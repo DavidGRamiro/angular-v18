@@ -1,1 +1,22 @@
-<p>defer-views works!</p>
+
+<section #section class="grid grid-cols-1">
+  @defer { 
+    <app-heavy-loader-slow cssClass="bg-blue-500"></app-heavy-loader-slow>
+  }@loading {
+    <img alt="loading..." src="loading.gif" />
+  }@placeholder {
+    <p>Esperando...</p>
+  }
+
+  @defer (on idle) { 
+    <app-heavy-loader-slow cssClass="bg-purple-500"></app-heavy-loader-slow>
+  }@placeholder(){
+    <p>Cargando..</p>
+  }
+
+  @defer (on viewport(section)) { 
+    <app-heavy-loader-slow cssClass="bg-green-500"></app-heavy-loader-slow>
+  }@placeholder(){
+    <p>Cargando..</p>
+  }
+</section>

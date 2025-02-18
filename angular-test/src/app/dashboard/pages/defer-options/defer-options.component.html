@@ -1,1 +1,83 @@
-<p>defer-options works!</p>
+
+
+
+<section>
+  <h1 class="text-xl">Interacciones</h1>
+  <hr class="my-2" />
+
+  @defer (on interaction) {
+    <app-heavy-loaders-fast cssClass="bg-blue-500 h-20">
+      <p>On Interaction click en el div</p>
+    </app-heavy-loaders-fast>
+  }@placeholder{
+    <div class="w-full h-20 bg-purple-200">
+      Placeholder en el div
+    </div>
+  }
+
+</section>
+
+
+
+<section>
+  <hr class="my-2" />
+
+  <button #btn class="bg-blue-500">Botón</button>
+
+
+  @defer (on interaction(btn)) {
+    <app-heavy-loaders-fast cssClass="bg-blue-500 h-20">
+      <p>On Interaction click en el boton</p>
+    </app-heavy-loaders-fast>
+  }@placeholder{
+    <div class="w-full h-20 bg-purple-200">
+      Placeholder en el div
+    </div>
+  }
+</section>
+
+
+<section>
+  <hr class="my-2" />
+
+  @defer (on hover) {
+    <app-heavy-loaders-fast cssClass="bg-blue-500 h-20">
+      <p>On Interaction hover !!</p>
+    </app-heavy-loaders-fast>
+  }@placeholder{
+    <div class="w-full h-20 bg-purple-200">
+      Placeholder en el div
+    </div>
+  }
+</section>
+
+
+<section>
+  <hr class="my-2" />
+
+  @defer (on immediate) {
+    <app-heavy-loaders-fast cssClass="bg-blue-500 h-20">
+      <p>On Interaction inmediatamente !!</p>
+    </app-heavy-loaders-fast>
+  }@placeholder{
+    <div class="w-full h-20 bg-purple-200">
+      Placeholder en el div
+    </div>
+  }
+</section>
+
+
+
+<section>
+  <hr class="my-2" />
+
+  @defer (on timer(2000)) {
+    <app-heavy-loaders-fast cssClass="bg-green-500 h-20">
+      <p>On Interaction timer 2 segundos!!</p>
+    </app-heavy-loaders-fast>
+  }@placeholder{
+    <div class="w-full h-20 bg-purple-200">
+      Placeholder en el div
+    </div>
+  }
+</section>
