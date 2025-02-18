@@ -1,1 +1,16 @@
-<p>users works!</p>
+<h1>Listado de usuarios</h1>
+
+
+<ul>
+  @for( user of userService.users(); track $index){
+
+    <li>
+      <img [srcset]="user.avatar">
+      <a [routerLink]="['/dashboard/user', user.id]">{{user.first_name}}</a>
+    </li>
+
+
+  }@empty{
+    <h1>Espere por favor</h1>
+  }
+</ul>
